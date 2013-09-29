@@ -1,14 +1,12 @@
 
 package org.intellij.pig.psi;
 
-import com.intellij.extapi.psi.PsiFileBase;
-import com.intellij.openapi.fileTypes.FileType;
-import com.intellij.psi.FileViewProvider;
 import org.intellij.pig.PigFileType;
 import org.intellij.pig.PigLanguage;
 import org.jetbrains.annotations.NotNull;
-
-import javax.swing.*;
+import com.intellij.extapi.psi.PsiFileBase;
+import com.intellij.openapi.fileTypes.FileType;
+import com.intellij.psi.FileViewProvider;
 
 public class PigFile extends PsiFileBase {
     public PigFile(@NotNull FileViewProvider viewProvider) {
@@ -24,10 +22,5 @@ public class PigFile extends PsiFileBase {
     @Override
     public String toString() {
         return "Pig File";
-    }
-
-    @Override
-    public Icon getIcon(int flags) {
-        return super.getIcon(flags);
     }
 }

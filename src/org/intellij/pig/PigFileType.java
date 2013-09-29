@@ -49,6 +49,6 @@ public class PigFileType extends LanguageFileType {
     @Nullable
     @Override
     public Icon getIcon() {
-        return PigIcons.FILE;
+        return PigIcons.File;
     }
 }

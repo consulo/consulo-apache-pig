@@ -16,10 +16,10 @@
 
 package org.intellij.pig;
 
+import javax.swing.Icon;
+
 import com.intellij.openapi.util.IconLoader;
 
-import javax.swing.*;
-
-public class PigIcons {
-    public static final Icon FILE = IconLoader.getIcon("/org/intellij/pig/icons/pig_icon.png");
+public interface PigIcons {
+    public static final Icon File = IconLoader.getIcon("/org/intellij/pig/icons/pig_icon.png");
 }

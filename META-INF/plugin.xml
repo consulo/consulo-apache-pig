@@ -1,6 +1,6 @@
 <idea-plugin version="2">
-  <id>org.apache.pig.plugin.idea</id>
-  <name>Pig</name>
+  <id>org.apache.pig</id>
+  <name>Apache Pig</name>
   <version>1.5</version>
   <vendor email="brandon.kearby at gmail com">Brandon Kearby &amp; Russell Melick</vendor>
 
@@ -69,26 +69,6 @@ We are happy to announce that rmelick and I have unified our efforts in the Inte
 </ul>
       ]]>
   </change-notes>
-
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105"/>
-
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products -->
-  <depends>com.intellij.modules.lang</depends>
-
-  <application-components>
-    <!-- Add your application components here -->
-  </application-components>
-
-  <project-components>
-    <!-- Add your project components here -->
-  </project-components>
-
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
 
   <extensions defaultExtensionNs="com.intellij">
     <lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>

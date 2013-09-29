@@ -1,5 +1,14 @@
 package org.intellij.pig.parser;
 
+import gnu.trove.THashSet;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedList;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import com.intellij.lang.*;
 import com.intellij.lang.impl.PsiBuilderAdapter;
 import com.intellij.lang.impl.PsiBuilderImpl;
@@ -19,15 +28,8 @@ import com.intellij.psi.tree.ICompositeElementType;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.tree.TokenSet;
 import com.intellij.util.Function;
+import com.intellij.util.LanguageVersionUtil;
 import com.intellij.util.containers.LimitedPool;
-import gnu.trove.THashSet;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedList;
 
 /**
  * @author gregsh
@@ -486,8 +488,8 @@ public class GeneratedParserUtilBase {
             state.caseSensitive = language.isCaseSensitive();
             ParserDefinition parserDefinition = LanguageParserDefinitions.INSTANCE.forLanguage(language);
             if (parserDefinition != null) {
-                state.commentTokens = parserDefinition.getCommentTokens();
-                state.whitespaceTokens = parserDefinition.getWhitespaceTokens();
+                state.commentTokens = parserDefinition.getCommentTokens(LanguageVersionUtil.findDefaultVersion(language));
+                state.whitespaceTokens = parserDefinition.getWhitespaceTokens(LanguageVersionUtil.findDefaultVersion(language));
             }
             PairedBraceMatcher matcher = LanguageBraceMatching.INSTANCE.forLanguage(language);
             state.braces = matcher == null ? null : matcher.getPairs();

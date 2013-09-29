@@ -16,8 +16,15 @@
 
 package org.intellij.pig;
 
+import org.intellij.pig.parser.PigLexer;
+import org.intellij.pig.parser.PigParser;
+import org.intellij.pig.psi.PigFile;
+import org.intellij.pig.psi.PigTokenType;
+import org.intellij.pig.psi.PigTypes;
+import org.jetbrains.annotations.NotNull;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.Language;
+import com.intellij.lang.LanguageVersion;
 import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiParser;
 import com.intellij.lexer.Lexer;
@@ -28,12 +35,6 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
-import org.intellij.pig.parser.PigLexer;
-import org.intellij.pig.parser.PigParser;
-import org.intellij.pig.psi.PigFile;
-import org.intellij.pig.psi.PigTokenType;
-import org.intellij.pig.psi.PigTypes;
-import org.jetbrains.annotations.NotNull;
 
 public class PigParserDefinition implements ParserDefinition{
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
@@ -42,27 +43,27 @@ public class PigParserDefinition implements ParserDefinition{
 
     @NotNull
     @Override
-    public Lexer createLexer(Project project) {
+    public Lexer createLexer(Project project, LanguageVersion languageVersion) {
         return new PigLexer();
     }
 
     @NotNull
-    public TokenSet getWhitespaceTokens() {
+    public TokenSet getWhitespaceTokens(LanguageVersion languageVersion) {
         return WHITE_SPACES;
     }
 
     @NotNull
-    public TokenSet getCommentTokens() {
+    public TokenSet getCommentTokens(LanguageVersion languageVersion) {
         return PigTokenType.getCommentSet();
     }
 
     @NotNull
-    public TokenSet getStringLiteralElements() {
+    public TokenSet getStringLiteralElements(LanguageVersion languageVersion) {
         return TokenSet.create(PigTypes.PIG_QUOTEDSTRING);
     }
 
     @NotNull
-    public PsiParser createParser(final Project project) {
+    public PsiParser createParser(final Project project, LanguageVersion languageVersion) {
         return new PigParser();
     }
 
