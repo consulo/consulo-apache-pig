@@ -3,7 +3,7 @@
 	<name>Apache Pig</name>
 	<version>SNAPSHOT</version>
 	<vendor email="brandon.kearby at gmail com">Brandon Kearby &amp; Russell Melick</vendor>
-	<category>Custom Language</category>
+	<category>Custom Languages</category>
 
 	<extensions defaultExtensionNs="com.intellij">
 		<lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
