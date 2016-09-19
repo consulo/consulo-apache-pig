@@ -1,18 +1,17 @@
 // This is a generated file. Not intended for manual editing.
 package org.intellij.pig.parser;
 
-import org.jetbrains.annotations.*;
-import com.intellij.lang.LighterASTNode;
+import com.intellij.lang.ASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
-import com.intellij.openapi.diagnostic.Logger;
-import static org.intellij.pig.psi.PigTypes.*;
-import static org.intellij.pig.parser.GeneratedParserUtilBase.*;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.lang.ASTNode;
-import com.intellij.psi.tree.TokenSet;
 import com.intellij.lang.PsiParser;
-import com.intellij.lang.LanguageVersion;
+import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.psi.tree.IElementType;
+import consulo.lang.LanguageVersion;
+import org.jetbrains.annotations.NotNull;
+
+import static org.intellij.pig.parser.GeneratedParserUtilBase.*;
+import static org.intellij.pig.psi.PigTypes.*;
 
 @SuppressWarnings({"SimplifiableIfStatement", "UnusedAssignment"})
 public class PigParser implements PsiParser {
