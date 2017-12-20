@@ -1,1 +1,1 @@
-![Build Status](http://must-be.org:8080/vulcan_web/statusImage?name=consulo-apache-pig)
+[![Build Status](https://ci.consulo.io/job/consulo-apache-pig/badge/icon)](https://ci.consulo.io/job/consulo-apache-pig/)
