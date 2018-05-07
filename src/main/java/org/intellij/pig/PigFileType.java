@@ -15,11 +15,10 @@
  */
 package org.intellij.pig;
 
-import com.intellij.openapi.fileTypes.LanguageFileType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import javax.swing.*;
+import com.intellij.openapi.fileTypes.LanguageFileType;
+import consulo.ui.image.Image;
 
 public class PigFileType extends LanguageFileType {
     public static final PigFileType INSTANCE = new PigFileType();
@@ -30,7 +29,7 @@ public class PigFileType extends LanguageFileType {
 
     @NotNull
     @Override
-    public String getName() {
+    public String getId() {
         return "Pig file";
     }
 
@@ -48,7 +47,7 @@ public class PigFileType extends LanguageFileType {
 
     @Nullable
     @Override
-    public Icon getIcon() {
+    public Image getIcon() {
         return PigIcons.File;
     }
 }

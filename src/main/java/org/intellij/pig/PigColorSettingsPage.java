@@ -18,8 +18,6 @@ package org.intellij.pig;
 
 import java.util.Map;
 
-import javax.swing.Icon;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
@@ -38,13 +36,7 @@ public class PigColorSettingsPage implements ColorSettingsPage {
       new AttributesDescriptor("Keywords", PigSyntaxHighlighter.KEYWORD),
       new AttributesDescriptor("Identifiers", PigSyntaxHighlighter.IDENTIFIER),
       new AttributesDescriptor("Binary Operators", PigSyntaxHighlighter.OP_SIGN),
-};
-
-    @Nullable
-    @Override
-    public Icon getIcon() {
-        return PigIcons.File;
-    }
+    };
 
     @NotNull
     @Override
