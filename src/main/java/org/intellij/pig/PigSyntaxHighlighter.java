@@ -19,7 +19,6 @@ package org.intellij.pig;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.intellij.pig.parser.PigLexer;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.NotNull;
 import com.intellij.lexer.Lexer;
@@ -140,7 +139,7 @@ public class PigSyntaxHighlighter extends SyntaxHighlighterBase
 	@Override
 	public Lexer getHighlightingLexer()
 	{
-		return new PigLexer();
+		return new _PigLexer();
 	}
 
 	@NotNull

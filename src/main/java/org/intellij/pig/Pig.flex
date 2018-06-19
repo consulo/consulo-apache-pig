@@ -1,6 +1,6 @@
 package org.intellij.pig;
 
-import com.intellij.lexer.FlexLexer;
+import com.intellij.lexer.LexerBase;
 import com.intellij.psi.tree.IElementType;
 import org.intellij.pig.psi.PigTypes;
 import com.intellij.psi.TokenType;
@@ -8,20 +8,15 @@ import org.intellij.pig.psi.PigTypes;
 import org.intellij.pig.psi.PigTokenType;
 
 %%
-%{
-  public _PigLexer() {
-    this((java.io.Reader)null);
-  }
-%}
 
 %public
 %class _PigLexer
-%implements FlexLexer
+%extends LexerBase
 
 %unicode
 %caseless
 
-%function advance
+%function advanceImpl
 %type IElementType
 
 %xstate FILENAME

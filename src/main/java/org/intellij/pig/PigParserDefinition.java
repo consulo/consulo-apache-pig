@@ -16,6 +16,11 @@
 
 package org.intellij.pig;
 
+import org.intellij.pig.parser.PigParser;
+import org.intellij.pig.psi.PigFile;
+import org.intellij.pig.psi.PigTokenType;
+import org.intellij.pig.psi.PigTypes;
+import org.jetbrains.annotations.NotNull;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.Language;
 import com.intellij.lang.ParserDefinition;
@@ -28,12 +33,6 @@ import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
 import consulo.lang.LanguageVersion;
-import org.intellij.pig.parser.PigLexer;
-import org.intellij.pig.parser.PigParser;
-import org.intellij.pig.psi.PigFile;
-import org.intellij.pig.psi.PigTokenType;
-import org.intellij.pig.psi.PigTypes;
-import org.jetbrains.annotations.NotNull;
 
 public class PigParserDefinition implements ParserDefinition{
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
@@ -43,7 +42,7 @@ public class PigParserDefinition implements ParserDefinition{
     @NotNull
     @Override
     public Lexer createLexer(@NotNull LanguageVersion languageVersion) {
-        return new PigLexer();
+        return new _PigLexer();
     }
 
     @Override
