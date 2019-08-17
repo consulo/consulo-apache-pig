@@ -481,7 +481,7 @@ public class GeneratedParserUtilBase {
         }
 
         private static void initState(IElementType root, PsiBuilder builder, ErrorState state) {
-            PsiFile file = builder.getUserDataUnprotected(FileContextUtil.CONTAINING_FILE_KEY);
+            PsiFile file = builder.getUserData(FileContextUtil.CONTAINING_FILE_KEY);
             state.completionState = file == null? null: file.getUserData(COMPLETION_STATE_KEY);
             Language language = file == null? root.getLanguage() : file.getLanguage();
             state.caseSensitive = language.isCaseSensitive();
