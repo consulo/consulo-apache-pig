@@ -1,4 +1,4 @@
-<cinsyki-plugin>
+<consulo-plugin>
 	<id>org.apache.pig</id>
 	<name>Apache Pig</name>
 	<version>SNAPSHOT</version>
@@ -16,4 +16,4 @@
 		<lang.commenter language="Pig" implementationClass="org.intellij.pig.PigCommenter"/>
 		<lang.foldingBuilder language="Pig" implementationClass="org.intellij.pig.PigCodeFoldingBuilder"/>
 	</extensions>
-</cinsyki-plugin>
+</consulo-plugin>
