@@ -20,8 +20,7 @@
 
 {
   parserClass="org.intellij.pig.parser.PigParser"
-  parserUtilClass="org.intellij.pig.parser.GeneratedParserUtilBase"
- 
+
   implements="org.intellij.pig.psi.PigPsiElement"
   extends="org.intellij.pig.psi.impl.PigPsiElementImpl"
 
