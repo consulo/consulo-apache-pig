@@ -4,6 +4,9 @@
 	<version>SNAPSHOT</version>
 	<vendor email="brandon.kearby at gmail com">Brandon Kearby &amp; Russell Melick</vendor>
 	<category>Custom Languages</category>
+	<tags>
+		<tag>custom.language</tag>
+	</tags>
 
 	<extensions defaultExtensionNs="com.intellij">
 		<lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
