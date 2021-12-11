@@ -17,6 +17,7 @@ package org.intellij.pig;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import consulo.apache.pig.icon.PigIconGroup;
+import consulo.localize.LocalizeValue;
 import consulo.ui.image.Image;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -36,8 +37,8 @@ public class PigFileType extends LanguageFileType {
 
     @NotNull
     @Override
-    public String getDescription() {
-        return "Pig language file";
+    public LocalizeValue getDescription() {
+        return LocalizeValue.localizeTODO("Pig language file");
     }
 
     @NotNull
