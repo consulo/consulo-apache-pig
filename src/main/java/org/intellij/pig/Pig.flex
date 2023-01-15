@@ -1,11 +1,9 @@
 package org.intellij.pig;
 
-import com.intellij.lexer.LexerBase;
-import com.intellij.psi.tree.IElementType;
+import consulo.language.ast.IElementType;
+import consulo.language.ast.TokenType;
+import consulo.language.lexer.LexerBase;
 import org.intellij.pig.psi.PigTypes;
-import com.intellij.psi.TokenType;
-import org.intellij.pig.psi.PigTypes;
-import org.intellij.pig.psi.PigTokenType;
 
 %%
 

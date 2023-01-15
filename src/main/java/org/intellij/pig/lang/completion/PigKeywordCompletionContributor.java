@@ -15,17 +15,22 @@
  */
 package org.intellij.pig.lang.completion;
 
-import com.intellij.codeInsight.completion.CompletionContributor;
-import com.intellij.codeInsight.completion.CompletionParameters;
-import com.intellij.codeInsight.completion.CompletionResultSet;
-import com.intellij.codeInsight.completion.CompletionType;
-import com.intellij.patterns.ElementPattern;
-import com.intellij.psi.PsiElement;
-import org.intellij.pig.psi.PigTypes;
 
-import static com.intellij.patterns.PlatformPatterns.psiComment;
-import static com.intellij.patterns.PlatformPatterns.psiElement;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.Language;
+import consulo.language.editor.completion.CompletionContributor;
+import consulo.language.editor.completion.CompletionParameters;
+import consulo.language.editor.completion.CompletionResultSet;
+import consulo.language.editor.completion.CompletionType;
+import consulo.language.pattern.ElementPattern;
+import consulo.language.psi.PsiElement;
+import org.intellij.pig.PigLanguage;
 
+import javax.annotation.Nonnull;
+
+import static consulo.language.pattern.PlatformPatterns.psiElement;
+
+@ExtensionImpl
 public class PigKeywordCompletionContributor extends CompletionContributor {
     private static final ElementPattern<PsiElement> AFTER_COLON = psiElement().afterLeaf(":");
 /*
@@ -42,5 +47,11 @@ public class PigKeywordCompletionContributor extends CompletionContributor {
     @Override
     public void fillCompletionVariants(CompletionParameters parameters, CompletionResultSet result) {
         super.fillCompletionVariants(parameters, result);
+    }
+
+    @Nonnull
+    @Override
+    public Language getLanguage() {
+        return PigLanguage.INSTANCE;
     }
 }

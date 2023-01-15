@@ -16,28 +16,38 @@
 
 package org.intellij.pig;
 
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.Language;
+import consulo.language.ast.ASTNode;
+import consulo.language.ast.IFileElementType;
+import consulo.language.ast.TokenSet;
+import consulo.language.ast.TokenType;
+import consulo.language.file.FileViewProvider;
+import consulo.language.lexer.Lexer;
+import consulo.language.parser.ParserDefinition;
+import consulo.language.parser.PsiParser;
+import consulo.language.psi.PsiElement;
+import consulo.language.psi.PsiFile;
+import consulo.language.version.LanguageVersion;
 import org.intellij.pig.parser.PigParser;
 import org.intellij.pig.psi.PigFile;
 import org.intellij.pig.psi.PigTokenType;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.NotNull;
-import com.intellij.lang.ASTNode;
-import com.intellij.lang.Language;
-import com.intellij.lang.ParserDefinition;
-import com.intellij.lang.PsiParser;
-import com.intellij.lexer.Lexer;
-import com.intellij.psi.FileViewProvider;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.PsiFile;
-import com.intellij.psi.TokenType;
-import com.intellij.psi.tree.IFileElementType;
-import com.intellij.psi.tree.TokenSet;
-import consulo.lang.LanguageVersion;
 
-public class PigParserDefinition implements ParserDefinition{
+import javax.annotation.Nonnull;
+
+@ExtensionImpl
+public class PigParserDefinition implements ParserDefinition {
     public static final TokenSet WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE);
 
     public static final IFileElementType FILE = new IFileElementType(Language.<PigLanguage>findInstance(PigLanguage.class));
+
+    @Nonnull
+    @Override
+    public Language getLanguage() {
+        return PigLanguage.INSTANCE;
+    }
 
     @NotNull
     @Override

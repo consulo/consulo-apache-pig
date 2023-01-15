@@ -15,12 +15,17 @@
  */
 package org.intellij.pig;
 
-import com.intellij.lang.CodeDocumentationAwareCommenter;
-import com.intellij.psi.PsiComment;
-import com.intellij.psi.tree.IElementType;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.CodeDocumentationAwareCommenter;
+import consulo.language.Language;
+import consulo.language.ast.IElementType;
+import consulo.language.psi.PsiComment;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
+
+@ExtensionImpl
 public class PigCommenter implements CodeDocumentationAwareCommenter {
 
     @Nullable
@@ -87,5 +92,11 @@ public class PigCommenter implements CodeDocumentationAwareCommenter {
     @Override
     public boolean isDocumentationComment(PsiComment element) {
         return element.getText().startsWith(getDocumentationCommentPrefix()) || element.getText().startsWith(getBlockCommentPrefix());
+    }
+
+    @Nonnull
+    @Override
+    public Language getLanguage() {
+        return PigLanguage.INSTANCE;
     }
 }

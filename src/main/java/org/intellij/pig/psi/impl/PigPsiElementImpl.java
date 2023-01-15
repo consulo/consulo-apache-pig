@@ -1,7 +1,7 @@
 package org.intellij.pig.psi.impl;
 
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
-import com.intellij.lang.ASTNode;
+import consulo.language.ast.ASTNode;
+import consulo.language.impl.psi.ASTWrapperPsiElement;
 import org.intellij.pig.psi.PigPsiElement;
 
 public class PigPsiElementImpl extends ASTWrapperPsiElement implements PigPsiElement {

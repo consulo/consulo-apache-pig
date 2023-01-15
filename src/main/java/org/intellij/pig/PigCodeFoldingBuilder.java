@@ -15,22 +15,26 @@
  */
 package org.intellij.pig;
 
-import com.intellij.lang.ASTNode;
-import com.intellij.lang.folding.FoldingBuilderEx;
-import com.intellij.lang.folding.FoldingDescriptor;
-import com.intellij.openapi.editor.Document;
-import com.intellij.openapi.project.DumbAware;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.search.PsiElementProcessor;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.util.PsiTreeUtil;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.application.dumb.DumbAware;
+import consulo.document.Document;
+import consulo.language.Language;
+import consulo.language.ast.ASTNode;
+import consulo.language.ast.IElementType;
+import consulo.language.editor.folding.FoldingBuilderEx;
+import consulo.language.editor.folding.FoldingDescriptor;
+import consulo.language.psi.PsiElement;
+import consulo.language.psi.resolve.PsiElementProcessor;
+import consulo.language.psi.util.PsiTreeUtil;
 import org.intellij.pig.psi.PigFile;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 
+@ExtensionImpl
 public class PigCodeFoldingBuilder extends FoldingBuilderEx implements DumbAware {
     @NotNull
     @Override
@@ -73,5 +77,11 @@ public class PigCodeFoldingBuilder extends FoldingBuilderEx implements DumbAware
     @Override
     public boolean isCollapsedByDefault(@NotNull ASTNode node) {
         return false;
+    }
+
+    @Nonnull
+    @Override
+    public Language getLanguage() {
+        return PigLanguage.INSTANCE;
     }
 }

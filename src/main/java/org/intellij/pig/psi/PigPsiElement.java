@@ -1,6 +1,6 @@
 package org.intellij.pig.psi;
 
-import com.intellij.psi.PsiElement;
+import consulo.language.psi.PsiElement;
 
 public interface PigPsiElement  extends PsiElement {
 }

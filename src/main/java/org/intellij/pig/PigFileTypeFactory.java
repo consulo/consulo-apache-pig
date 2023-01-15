@@ -15,11 +15,13 @@
  */
 package org.intellij.pig;
 
-import com.intellij.openapi.fileTypes.FileTypeConsumer;
-import com.intellij.openapi.fileTypes.FileTypeFactory;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.virtualFileSystem.fileType.FileTypeConsumer;
+import consulo.virtualFileSystem.fileType.FileTypeFactory;
 import org.jetbrains.annotations.NotNull;
 
-public class PigFileTypeFactory extends FileTypeFactory{
+@ExtensionImpl
+public class PigFileTypeFactory extends FileTypeFactory {
     @Override
     public void createFileTypes(@NotNull FileTypeConsumer fileTypeConsumer) {
         fileTypeConsumer.consume(PigFileType.INSTANCE, "pig");

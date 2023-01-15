@@ -15,8 +15,8 @@
  */
 package org.intellij.pig;
 
-import com.intellij.openapi.fileTypes.LanguageFileType;
 import consulo.apache.pig.icon.PigIconGroup;
+import consulo.language.file.LanguageFileType;
 import consulo.localize.LocalizeValue;
 import consulo.ui.image.Image;
 import org.jetbrains.annotations.NotNull;

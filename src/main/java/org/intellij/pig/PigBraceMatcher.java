@@ -15,15 +15,15 @@
  */
 package org.intellij.pig;
 
-import com.intellij.lang.BracePair;
-import com.intellij.lang.PairedBraceMatcher;
-import com.intellij.psi.PsiFile;
-import com.intellij.psi.tree.IElementType;
-import org.intellij.pig.psi.PigType;
+import consulo.annotation.component.ExtensionImpl;
+import consulo.language.BracePair;
+import consulo.language.Language;
+import consulo.language.PairedBraceMatcher;
 import org.intellij.pig.psi.PigTypes;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
+
+@ExtensionImpl
 public class PigBraceMatcher implements PairedBraceMatcher {
     private static final BracePair[] PAIRS = new BracePair[] {
             new BracePair(PigTypes.PIG_LBRACE, PigTypes.PIG_RBRACE, true),
@@ -36,13 +36,9 @@ public class PigBraceMatcher implements PairedBraceMatcher {
         return PAIRS;
     }
 
+    @Nonnull
     @Override
-    public boolean isPairedBracesAllowedBeforeType(@NotNull IElementType lbraceType, @Nullable IElementType contextType) {
-        return true;
-    }
-
-    @Override
-    public int getCodeConstructStart(PsiFile file, int openingBraceOffset) {
-        return openingBraceOffset;
+    public Language getLanguage() {
+        return PigLanguage.INSTANCE;
     }
 }

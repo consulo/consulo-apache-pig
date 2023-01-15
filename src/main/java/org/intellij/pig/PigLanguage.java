@@ -16,7 +16,7 @@
 
 package org.intellij.pig;
 
-import com.intellij.lang.Language;
+import consulo.language.Language;
 
 public class PigLanguage extends Language {
     public static final PigLanguage INSTANCE = new PigLanguage();

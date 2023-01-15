@@ -21,6 +21,8 @@
 {
   parserClass="org.intellij.pig.parser.PigParser"
 
+  version = "3"
+
   implements="org.intellij.pig.psi.PigPsiElement"
   extends="org.intellij.pig.psi.impl.PigPsiElementImpl"
 

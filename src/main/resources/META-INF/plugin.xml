@@ -7,16 +7,4 @@
 	<tags>
 		<tag>custom.language</tag>
 	</tags>
-
-	<extensions defaultExtensionNs="com.intellij">
-		<lang.braceMatcher language="Pig" implementationClass="org.intellij.pig.PigBraceMatcher"/>
-		<fileTypeFactory implementation="org.intellij.pig.PigFileTypeFactory"/>
-		<lang.parserDefinition language="Pig" implementationClass="org.intellij.pig.PigParserDefinition"/>
-		<lang.syntaxHighlighterFactory key="Pig" implementationClass="org.intellij.pig.PigSyntaxHighlighterFactory"/>
-		<colorSettingsPage implementation="org.intellij.pig.PigColorSettingsPage"/>
-		<!--<annotator language="JAVA" implementationClass="org.intellij.pig.PigAnnotator"/>-->
-		<completion.contributor language="Pig" implementationClass="org.intellij.pig.lang.completion.PigKeywordCompletionContributor"/>
-		<lang.commenter language="Pig" implementationClass="org.intellij.pig.PigCommenter"/>
-		<lang.foldingBuilder language="Pig" implementationClass="org.intellij.pig.PigCodeFoldingBuilder"/>
-	</extensions>
 </consulo-plugin>
