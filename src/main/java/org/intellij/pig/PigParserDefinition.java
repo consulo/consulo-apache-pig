@@ -35,7 +35,7 @@ import org.intellij.pig.psi.PigTokenType;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 @ExtensionImpl
 public class PigParserDefinition implements ParserDefinition {

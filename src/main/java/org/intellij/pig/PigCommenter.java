@@ -23,7 +23,7 @@ import consulo.language.psi.PsiComment;
 import org.intellij.pig.psi.PigTypes;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 @ExtensionImpl
 public class PigCommenter implements CodeDocumentationAwareCommenter {

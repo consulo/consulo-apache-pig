@@ -26,7 +26,7 @@ import consulo.language.pattern.ElementPattern;
 import consulo.language.psi.PsiElement;
 import org.intellij.pig.PigLanguage;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 import static consulo.language.pattern.PlatformPatterns.psiElement;
 

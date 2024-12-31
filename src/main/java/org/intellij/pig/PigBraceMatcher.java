@@ -21,7 +21,7 @@ import consulo.language.Language;
 import consulo.language.PairedBraceMatcher;
 import org.intellij.pig.psi.PigTypes;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 @ExtensionImpl
 public class PigBraceMatcher implements PairedBraceMatcher {

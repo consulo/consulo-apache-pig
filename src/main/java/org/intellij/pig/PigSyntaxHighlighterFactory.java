@@ -24,7 +24,7 @@ import consulo.project.Project;
 import consulo.virtualFileSystem.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 @ExtensionImpl
 public class PigSyntaxHighlighterFactory extends SyntaxHighlighterFactory {
