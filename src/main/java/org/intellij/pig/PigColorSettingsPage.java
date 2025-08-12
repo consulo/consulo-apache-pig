@@ -17,15 +17,11 @@
 package org.intellij.pig;
 
 import consulo.annotation.component.ExtensionImpl;
-import consulo.colorScheme.TextAttributesKey;
 import consulo.colorScheme.setting.AttributesDescriptor;
-import consulo.colorScheme.setting.ColorDescriptor;
 import consulo.language.editor.colorScheme.setting.ColorSettingsPage;
 import consulo.language.editor.highlight.SyntaxHighlighter;
+import consulo.localize.LocalizeValue;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.Map;
 
 @ExtensionImpl
 public class PigColorSettingsPage implements ColorSettingsPage {
@@ -95,12 +91,6 @@ public class PigColorSettingsPage implements ColorSettingsPage {
         "\n";
     }
 
-    @Nullable
-    @Override
-    public Map<String, TextAttributesKey> getAdditionalHighlightingTagToDescriptorMap() {
-        return null;
-    }
-
     @NotNull
     @Override
     public AttributesDescriptor[] getAttributeDescriptors() {
@@ -109,13 +99,7 @@ public class PigColorSettingsPage implements ColorSettingsPage {
 
     @NotNull
     @Override
-    public ColorDescriptor[] getColorDescriptors() {
-        return ColorDescriptor.EMPTY_ARRAY;
-    }
-
-    @NotNull
-    @Override
-    public String getDisplayName() {
-        return "Pig";
+    public LocalizeValue getDisplayName() {
+        return LocalizeValue.localizeTODO("Pig");
     }
 }
