@@ -29,13 +29,13 @@ import consulo.language.parser.PsiParser;
 import consulo.language.psi.PsiElement;
 import consulo.language.psi.PsiFile;
 import consulo.language.version.LanguageVersion;
+import jakarta.annotation.Nonnull;
 import org.intellij.pig.parser.PigParser;
 import org.intellij.pig.psi.PigFile;
 import org.intellij.pig.psi.PigTokenType;
 import org.intellij.pig.psi.PigTypes;
+import org.intellij.pig.psi.impl.PigTypesFactory;
 import org.jetbrains.annotations.NotNull;
-
-import jakarta.annotation.Nonnull;
 
 @ExtensionImpl
 public class PigParserDefinition implements ParserDefinition {
@@ -97,6 +97,6 @@ public class PigParserDefinition implements ParserDefinition {
     @Override
     @NotNull
     public PsiElement createElement(@NotNull ASTNode node) {
-        return PigTypes.Factory.createElement(node);
+        return PigTypesFactory.createElement(node);
     }
 }
